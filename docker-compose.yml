@@ -1,0 +1,15 @@
+version: "3"
+services:
+  node1:
+    image: rabbitmq
+    volumes:
+      - ./data:/var/lib/rabbitmq
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "hjih8328zbuodhuwrzhuid2iue2"
+      ABBITMQ_NODENAME: "rabbit-starter"
+      RABBITMQ_DEFAULT_USER: rabbitmq
+      RABBITMQ_DEFAULT_PASS: rabbitmq
+
+    ports:
+      - 5672:5672
+      - 15672:15672
